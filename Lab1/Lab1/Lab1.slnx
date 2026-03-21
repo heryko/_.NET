@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../GUI/GUI.csproj" />
+  <Project Path="../TestProject1/TestProject1.csproj" Id="55763bb3-5dd2-4f45-b6bc-f16c19795aea" />
+  <Project Path="Lab1.csproj" />
+</Solution>
