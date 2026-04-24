@@ -18,20 +18,22 @@ Repozytorium zawierające projekty realizowane w ramach nauki platformy .NET.
     - Testy automatyczne sprawdzające np. czy metoda licząca średnią poprawnie reaguje na puste dane.
     - Pokrycie testami kluczowych metod z projektu Lab1.
 
-- **Lab2** - Projekt aplikacji bazodanowej integrującej zewnętrzne API oraz trwałe przechowywanie danych.
-Opis projektu
+- **Lab3** - Obliczenia wielowątkowe w technologii.NET
+  - `MatrixLibrary` - - Logika obliczeniowa oparta na paradygmatach obiektowych. 
+    Implementacja wysokopoziomowego zrównoleglania z użyciem biblioteki Parallel (Parallel.For).
+    Implementacja niskopoziomowego zarządzania wątkami przy użyciu klasy Thread. 
+    Mechanizmy synchronizacji i kontroli stopnia zrównoleglenia (ParallelOptions, Thread.Join). 
 
-Celem laboratorium jest stworzenie programu w języku C#, który komunikuje się z API (Open Exchange Rates) oraz zarządza lokalną bazą danych przy użyciu Entity Framework Core.
-Struktura Lab 2
+  - `PerformanceConsole` - Aplikacja konsolowa do analizy wydajności. 
+    Generowanie losowych macierzy o parametrach podawanych w kodzie lub z konsoli. 
+    Pomiar czasu wykonywania operacji przy użyciu klasy Stopwatch. 
+    Porównanie i analiza przyspieszenia (Speedup) algorytmów wielowątkowych względem podejścia sekwencyjnego dla różnych rozmiarów macierzy (≥100). 
 
-    Zadanie 1: API & JSON – Pobieranie danych asynchronicznie za pomocą HttpClient oraz ich deserializacja.
+| Wątki (Y) \ Rozmiar (X) | 500 (P / T) | 100 (P / T) |
+| :--- | :--- | :--- |
+| **1 (Sekwencyjnie)** | 2591 ms / 2090 ms | 24 ms / 21 ms |
+| **2** | 1249 ms / 1295 ms | 9 ms / 20 ms |
+| **4** | 638 ms / 675 ms | 5 ms / 29 ms |
+| **12** | 314 ms / 394 ms | 11 ms / 65 ms |
+| **100** | 433 ms / 1203 ms | 13 ms / 456 ms |
 
-    Zadanie 2: Baza danych (EF Core) – Obsługa bazy danych w pliku SQLite oraz mapowanie obiektowo-relacyjne (ORM).
-
-        Relacje: Zaimplementowana relacja jeden-do-wielu (klasa ExchangeDate oraz CurrencyRate).
-
-        Mechanizm Cache: Dane pobierane są z API tylko w przypadku ich braku w bazie danych (optymalizacja zapytań).
-
-        Praca z danymi: Filtrowanie i sortowanie wyników za pomocą kwerend LINQ.
-
-    Zadanie 3: GUI (MAUI) – (W trakcie/Opcjonalnie) Interfejs użytkownika w technologii Multi-platform App UI pozwalający na wyświetlanie i dodawanie rekordów.
