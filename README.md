@@ -37,3 +37,20 @@ Repozytorium zawierające projekty realizowane w ramach nauki platformy .NET.
 | **12** | 314 ms / 394 ms | 11 ms / 65 ms |
 | **100** | 433 ms / 1203 ms | 13 ms / 456 ms |
 
+
+Oto opis Lab 4 przygotowany w bloku kodu, gotowy do skopiowania do pliku README.md. Struktura i wcięcia są identyczne z Twoimi poprzednimi wpisami:
+Markdown
+
+- **Lab 4** - Aplikacja webowa w technologii ASP.NET Core.
+  - `BlazorApp` - Użycie platformy Blazor i modyfikacja domyślnego projektu.
+     - Implementacja aplikacji w oparciu o .NET 8.0 i tryb Interactive Server.
+     - Rozszerzenie komponentu pogodowego o 10-dniową prognozę oraz licznik dni ciepłych (>15°C).
+     - Wykorzystanie składni LINQ do filtrowania danych oraz obsługa zdarzeń interfejsu użytkownika.
+  - `ML_SentimentAnalysis` - Użycie biblioteki ML.NET do klasyfikacji nastroju.
+     - Wytrenowanie modelu AI przy użyciu Model Builder na zbiorze danych z serwisu Kaggle.
+     - Integracja modelu z aplikacją poprzez wstrzykiwanie usługi PredictionEnginePool.
+     - Budowa interaktywnej podstrony do analizy sentymentu wyświetlającej etykietę oraz pewność predykcji.
+  - `DatabaseApp` - Bazodanowa aplikacja webowa z systemem autoryzacji.
+     - Wykorzystanie Entity Framework Core do obsługi bazy danych i automatycznej generacji stron typu CRUD.
+     - Implementacja systemu logowania oraz Individual Accounts do autoryzacji i zabezpieczania dostępu do stron.
+     - Funkcjonalności dodatkowe: dynamiczne sortowanie kolumn, system aktualizacji ocen oraz obsługa obrazów via URL.
